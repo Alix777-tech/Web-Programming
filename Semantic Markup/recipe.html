@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Makes the page responsive on mobile screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cooking with Andy!</title>
+  <!-- Loads Playfair Display (headings) and Lora (body) fonts from Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    /* Reset default browser margin/padding on all elements */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Page background: warm cream with soft golden gradients */
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background-color: #fdf6ed;
+      background-image:
+        radial-gradient(ellipse at 20% 20%, rgba(210, 180, 140, 0.18) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 80%, rgba(188, 143, 95, 0.12) 0%, transparent 60%);
+      color: #2e1f0e;
+      min-height: 100vh;
+    }
+
+    /* Header: dark brown background */
+    header {
+      background-color: #3b1f0a;
+      padding: 28px 40px 20px;
+    }
+
+    /* Site title in the header */
+    header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.6rem;
+      color: #f5e6d0;
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+    }
+
+    /* Nav links styling */
+    nav a {
+      font-family: 'Lora', serif;
+      font-size: 0.95rem;
+      color: #e0c49a;
+      text-decoration: none;
+      margin-right: 18px;
+      letter-spacing: 0.5px;
+      transition: color 0.2s; /* Smooth color change on hover */
+    }
+
+    /* Nav link turns white when hovered */
+    nav a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    /* Centers the main content with a max width */
+    main {
+      max-width: 780px;
+      margin: 48px auto;
+      padding: 0 32px 60px;
+    }
+
+    /* Recipe title with an amber underline */
+    h2.recipe-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2rem;
+      color: #3b1f0a;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #c8965a;
+      padding-bottom: 10px;
+    }
+
+    /* Short italic description below the title */
+    .description {
+      font-style: italic;
+      color: #6b4226;
+      font-size: 1.05rem;
+      margin-bottom: 36px;
+      margin-top: 8px;
+    }
+
+    /* Section headings (Ingredients, Instructions) */
+    h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.4rem;
+      color: #3b1f0a;
+      margin-bottom: 16px;
+      margin-top: 36px;
+    }
+
+    /* Unordered list for ingredients */
+    ul {
+      list-style: disc;
+      padding-left: 28px;
+      margin-bottom: 28px;
+    }
+
+    ul li {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: #3a2310;
+    }
+
+    /* Tip box: highlighted callout with amber left border */
+    .tip-box {
+      background-color: #f0dfc0;
+      border-left: 5px solid #c8965a;
+      border-radius: 6px;
+      padding: 18px 22px;
+      margin: 28px 0 36px;
+      font-size: 0.97rem;
+      color: #4e2e10;
+      line-height: 1.7;
+    }
+
+    /* Numbered list for instructions */
+    ol {
+      padding-left: 28px;
+      margin-bottom: 28px;
+    }
+
+    ol li {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: #3a2310;
+      margin-bottom: 6px;
+    }
+
+    /* Footer: matches header style */
+    footer {
+      background-color: #3b1f0a;
+      color: #c8a97a;
+      text-align: left;
+      padding: 24px 40px;
+      font-family: 'Lora', serif;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top header with site name and navigation -->
+  <header>
+    <h1>Cooking with Andy!</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Blog</a>
+      <a href="#">Browse</a>
+    </nav>
+  </header>
+
+  <!-- Main recipe content -->
+  <main>
+    <!-- Recipe title and short description -->
+    <h2 class="recipe-title">Chocolate Chip Cookies</h2>
+    <p class="description">Delicious homemade cookies with gooey chocolate chips!</p>
+
+    <!-- Ingredients section -->
+    <h3>Ingredients</h3>
+    <ul>
+      <li>2 1/4 cups flour</li>
+      <li>1/2 teaspoon baking soda</li>
+      <li>1 cup unsalted butter, softened</li>
+      <li>1/2 cup granulated sugar</li>
+      <li>1 cup packed brown sugar</li>
+      <li>1 teaspoon vanilla extract</li>
+      <li>2 large eggs</li>
+      <li>2 cups semisweet chocolate chips</li>
+    </ul>
+
+    <!-- Tip box for egg substitutes -->
+    <div class="tip-box">
+      If you don't have eggs, you can use a suitable egg substitute like applesauce, mashed bananas, or yogurt. Use 1/4 cup of the substitute for each egg in the recipe.
+    </div>
+
+    <!-- Step-by-step instructions -->
+    <h3>Instructions</h3>
+    <ol>
+      <li>Preheat your oven to 190°C.</li>
+      <li>In a small bowl, mix the flour and baking soda. Set aside.</li>
+      <li>In a large mixing bowl, cream together the softened butter, granulated sugar, brown sugar, and vanilla extract until smooth.</li>
+      <li>Add the eggs one at a time, beating well after each addition.</li>
+      <li>Gradually add the flour mixture to the wet ingredients, mixing until well combined.</li>
+      <li>Stir in the chocolate chips.</li>
+      <li>Drop rounded tablespoons of dough onto ungreased baking sheets.</li>
+      <li>Bake in the oven for 8-10 minutes or until the edges are golden brown.</li>
+      <li>Allow the cookies to cool on the baking sheets for a few minutes before transferring them to wire racks to cool completely.</li>
+    </ol>
+  </main>
+
+  <!-- Footer with copyright -->
+  <footer>
+    Cooking With Andy &copy; 2024
+  </footer>
+
+</body>
+</html>
