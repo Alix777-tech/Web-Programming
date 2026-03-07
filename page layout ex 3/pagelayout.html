@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Makes the page responsive on mobile screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E's Gallery</title>
+  <!-- Loads Playfair Display (heading) and Raleway (body) fonts from Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* Reset default margin and padding on all elements */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Page background: soft warm beige gradient */
+    body {
+      font-family: 'Raleway', Arial, sans-serif;
+      background: linear-gradient(135deg, #e8e0d5 0%, #d6cfc6 100%);
+      color: #1a1a1a;
+      min-height: 100vh;
+    }
+
+    /* Page container: limits width and centres content */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    /* Site title at the top of the page */
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 3.4rem;
+      text-align: center;
+      padding: 36px 0 20px;
+      color: #1a1a1a;
+      letter-spacing: 1px;
+    }
+
+    /* Navigation bar with spaced links */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      margin-bottom: 36px;
+    }
+
+    /* Individual nav links */
+    nav a {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      color: #2a52a0;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+
+    /* Nav link colour change on hover */
+    nav a:hover {
+      color: #1a3570;
+    }
+
+    /* Top section: text on left, image on right */
+    .intro-section {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    /* Left text block takes up remaining space */
+    .intro-text {
+      flex: 1;
+    }
+
+    /* Body paragraphs */
+    .intro-text p {
+      font-size: 1rem;
+      line-height: 1.85;
+      margin-bottom: 20px;
+      color: #2a2a2a;
+    }
+
+    /* Right-side image in the intro section */
+    .intro-image {
+      width: 340px;
+      height: 340px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border-radius: 4px;
+      background-color: #c9bfb5;
+    }
+
+    /* Second paragraph sits below and spans full width */
+    .full-width-para {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: #2a2a2a;
+      margin-bottom: 32px;
+    }
+
+    /* Row 1: video on left (60%), image on right (40%) */
+    .gallery-row-1 {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+
+    /* Row 2: three equal images side by side */
+    .gallery-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+
+    /* Row 3: two images side by side */
+    .gallery-row-3 {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      gap: 4px;
+    }
+
+    /* All gallery images share these base styles */
+    .gallery-img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      background-color: #b0a89e;
+    }
+
+    /* Taller height for row 1 images */
+    .gallery-row-1 .gallery-img {
+      height: 280px;
+    }
+
+    /* Medium height for row 2 images */
+    .gallery-row-2 .gallery-img {
+      height: 220px;
+    }
+
+    /* Taller height for row 3 images */
+    .gallery-row-3 .gallery-img {
+      height: 280px;
+    }
+
+    /* Video element matches gallery image sizing */
+    .gallery-video {
+      width: 100%;
+      height: 280px;
+      display: block;
+      object-fit: cover;
+      background-color: #1a1a1a;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Site title -->
+    <h1>E's Gallery</h1>
+
+    <!-- Navigation links -->
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Gallery</a>
+    </nav>
+
+    <!-- Intro: first paragraph + image side by side -->
+    <div class="intro-section">
+      <div class="intro-text">
+        <p>Anime is more than just animation — it is a carefully crafted art form that has captivated millions around the world. Originating in Japan, anime brings together expressive character design, vibrant colour palettes, and deeply emotional storytelling in a way that no other medium quite achieves. Each frame is a work of art, with artists dedicating countless hours to perfecting the movement of hair in the wind, the shimmer of light in a character's eyes, and the breathtaking detail of fantastical worlds that feel entirely alive.</p>
+        <p>What makes anime truly special is the range of emotions it can convey through visual art alone. From the bold, dynamic lines of action scenes to the soft, delicate brushwork of quiet, introspective moments — every style choice is intentional. The art of anime blends traditional Japanese aesthetics with modern digital techniques, creating a visual language that is instantly recognisable yet endlessly diverse across genres and studios.</p>
+      </div>
+
+      <!-- PUT YOUR INTRO IMAGE HERE (top right) -->
+      <img
+        class="intro-image"
+        src="https://as2.ftcdn.net/jpg/04/90/84/21/1000_F_490842185_Ll9ATc00Cnwqv8AcRGZMPdpoHQYCKJor.jpg" 
+        alt="Anime artwork"
+      />
+    </div>
+
+    <!-- Second paragraph spanning full width below the image -->
+    <p class="full-width-para">This gallery is a celebration of that artistry — a curated collection of anime illustrations, scenes, and characters that showcase the incredible depth and beauty of the anime art style. Whether you are a lifelong fan or discovering it for the first time, each piece here tells a story worth exploring.</p>
+
+    <div class="gallery-row-1">
+
+        <img
+        class="gallery-img"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt2vRJAmDPzm8cM7DxUjjzUcSkoScN9ifgXA&s" 
+        alt="Anime gallery image 1"
+      />
+
+      <img
+        class="gallery-img"
+        src="https://images2.alphacoders.com/595/595171.jpg" 
+        alt="Anime gallery image 2"
+      />
+
+    </div>
+
+    <div class="gallery-row-2">
+
+      <img
+        class="gallery-img"
+        src="https://w0.peakpx.com/wallpaper/914/164/HD-wallpaper-view-from-my-home-1-anime-boy-anime-1.jpg"
+        alt="Anime gallery image 4"
+      />
+
+      <img
+        class="gallery-img"
+        src="https://img.freepik.com/free-photo/nighttime-cityscape-window-view-with-book-coffee_23-2151997917.jpg?semt=ais_user_personalization&w=740&q=80"
+        alt="Anime gallery image 5"
+      />
+      <img
+        class="gallery-img"
+        src="https://w0.peakpx.com/wallpaper/906/105/HD-wallpaper-anime-school-girl-anime-landscape-cityscape-school-uniform-back-view-anime.jpg"
+        alt="Anime gallery image 6" 
+        />
+
+    </div>
+
+    <div class="gallery-row-3">
+
+      <img
+        class="gallery-img"
+        src="https://w0.peakpx.com/wallpaper/623/819/HD-wallpaper-anime-girl-back-view-balloon-sunset-buildings-sky-anime.jpg"
+        alt="Anime gallery image 7"
+      />
+
+      <img
+        class="gallery-img"
+        src="https://thumbs.dreamstime.com/b/lonely-anime-boy-cityscape-night-view-pink-sky-moon-stylized-anime-boy-sits-alone-rooftop-overlooking-sprawling-cityscape-360625088.jpg"
+        alt="Anime gallery image 8"
+      />
+    </div>
+
+  </div>
+
+</body>
+</html>
